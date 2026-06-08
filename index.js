@@ -6,119 +6,123 @@ const API_URL = "https://6a258fe55447714a6f838904.mockapi.io/api/products"
 const productsContainer = document.getElementById("products")
 
 let allProducts = []
+let visibleCount = 9
+let currentProducts = []
+
 
 //گرفتن محصولات 
 async function getProducts() {
-    const response = await fetch(API_URL)
-    const data = await response.json()
+  const response = await fetch(API_URL)
+  const data = await response.json()
 
-    allProducts = data
+  allProducts = data
 
-    //مرتب کردن بر اساس زمان اضافه شدن (LATEST)
-    const latest = [...allProducts].sort(
-        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-    )
+  //مرتب کردن بر اساس زمان اضافه شدن (LATEST)
+  const latest = [...allProducts].sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  )
 
-    renderProducts(latest)
+  currentProducts = latest
+  visibleCount = 9
 
-    //استایل دکمه
-    setActiveButton(document.getElementById("latestBtn"))
+  renderProducts()
+
+  //استایل دکمه
+  setActiveButton(document.getElementById("latestBtn"))
 }
 
+
 //ساخت محصولات و نمایش در صفحه
-function renderProducts(products) {
-    productsContainer.innerHTML = ""
+function renderProducts() {
+  productsContainer.innerHTML = ""
 
-    products.forEach(product => {
+  const productsToShow = currentProducts.slice(0, visibleCount)
 
-        let priceHTML = ""
+  productsToShow.forEach(product => {
 
-        if (product.saleOff > 0) {
-            //محاسبه تخفیف
-            const finalPrice = product.price - (product.price * product.saleOff / 100)
+    let priceHTML = ""
 
-            priceHTML = `
-        <div class="text-xs flex gap-2 items-center">
-          <span class="line-through text-gray-400">
-            $${product.price}
-          </span>
-          <span class="font-bold">
-            $${finalPrice.toFixed(2)}
-          </span>
+    if (product.saleOff > 0) {
+      //محاسبه تخفیف
+      const finalPrice = product.price - (product.price * product.saleOff / 100)
+
+      priceHTML = `
+            <div class="text-xs flex gap-2 items-center">
+              <span class="line-through text-gray-400">$${product.price}</span>
+              <span class="font-bold">$${finalPrice.toFixed(2)}</span>
+            </div>
+            `
+    } else {
+      priceHTML = `<div class="text-xs">$${product.price}</div>`
+    }
+
+    productsContainer.innerHTML += `
+        <div class="flex flex-col gap-1 items-center">
+
+        <div class="relative w-32 h-44 overflow-hidden">
+
+        ${product.saleOff > 0 ? `
+        <div class="absolute -top-1 -right-8 rotate-45 bg-red-600 text-white text-[10px] px-7 py-[5px] font-semibold text-center">
+        SALE
+        </div>` : ""}
+
+        ${product.bestSale ? `
+        <div class="absolute -top-1 -left-8 -rotate-45 bg-blue-600 text-white text-[10px] px-7 py-[5px] font-semibold text-center">
+        BEST
+        </div>` : ""}
+
+        <img src="${product.image}" class="w-32 h-44 border object-cover" />
         </div>
-      `
-        } else {
-            priceHTML = `
-        <div class="text-xs">
-          $${product.price}
+
+        <div class="text-xs">${product.title}</div>
+        ${priceHTML}
+
         </div>
-      `
-        }
-
-        productsContainer.innerHTML += `
-  <div class="flex flex-col gap-1 items-center">
-
-<div class="relative w-32 h-44 overflow-hidden">
-
-  ${product.saleOff > 0 ? `
-    <div class="absolute -top-1 -right-8 rotate-45 bg-red-600 text-white text-[10px] px-7 py-[5px] font-semibold text-center">
-      SALE
-    </div>
-  ` : ""}
-
-  ${product.bestSale ? `
-    <div class="absolute -top-1 -left-8 -rotate-45 bg-blue-600 text-white text-[10px] px-7 py-[5px] font-semibold text-center">
-      BEST
-    </div>
-  ` : ""}
-
-  <img src="${product.image}" class="w-32 h-44 border object-cover" />
-
-</div>
-
-    <div class="text-xs">${product.title}</div>
-    ${priceHTML}
-
-  </div>
-`
-    })
+        `
+  })
 }
 
 getProducts()
 
 //دکمه LATEST
 document.getElementById("latestBtn").addEventListener("click", (e) => {
-    setActiveButton(e.target)
-
-    const latest = [...allProducts].sort(
-        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-    )
-    renderProducts(latest)
+  setActiveButton(e.target)
+  const latest = [...allProducts].sort(
+    (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+  )
+  currentProducts = latest
+  visibleCount = 9
+  renderProducts()
 })
 
 //دکمه SALE OFF
 document.getElementById("saleBtn").addEventListener("click", (e) => {
-    setActiveButton(e.target)
-
-    const sale = allProducts.filter(product => product.saleOff > 0)
-    renderProducts(sale)
+  setActiveButton(e.target)
+  currentProducts = allProducts.filter(product => product.saleOff > 0)
+  visibleCount = 9
+  renderProducts()
 })
 
 //دکمه BEST SALE
 document.getElementById("bestBtn").addEventListener("click", (e) => {
-    setActiveButton(e.target)
-
-    const best = allProducts.filter(product => product.bestSale === true)
-    renderProducts(best)
+  setActiveButton(e.target)
+  currentProducts = allProducts.filter(product => product.bestSale === true)
+  visibleCount = 9
+  renderProducts()
 })
 
 //استایل دکمه های فیلتر
 const buttons = document.querySelectorAll(".filterBtn")
 
-function setActiveButton(clickedBtn){
-  buttons.forEach(btn=>{
-    btn.classList.remove("border-b-2","border-gray-700","font-bold")
+function setActiveButton(clickedBtn) {
+  buttons.forEach(btn => {
+    btn.classList.remove("border-b-2", "border-gray-700", "font-bold")
   })
-
-  clickedBtn.classList.add("border-b-2","border-gray-700","font-bold")
+  clickedBtn.classList.add("border-b-2", "border-gray-700", "font-bold")
 }
+
+//دکمه load more items
+document.getElementById("loadMoreBtn").addEventListener("click", () => {
+  visibleCount += 9
+  renderProducts()
+})
