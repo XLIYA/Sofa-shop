@@ -7,39 +7,46 @@
     <script src="tailwind.js"></script>
   </head>
   <body>
-    <div class="p-3 flex items-center">
-      <button id="latestBtn"
-        class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
-      >
-        LATEST
-      </button>
-      <span class="h-4 border-r border-gray-300"></span>
-      <button id="saleBtn"
-        class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
-      >
-        SALE OFF
-      </button>
-      <span class="h-4 border-r border-gray-300"></span>
-      <button id="bestBtn"
-        class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
-      >
-        BEST SALE
-      </button>
-      <span class="flex-grow border-b border-gray-300 ml-4"></span>
-    </div>
+    <section>
+      <div class="p-3 flex items-center">
+        <button
+          id="latestBtn"
+          class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
+        >
+          LATEST
+        </button>
+        <span class="h-4 border-r border-gray-300"></span>
+        <button
+          id="saleBtn"
+          class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
+        >
+          SALE OFF
+        </button>
+        <span class="h-4 border-r border-gray-300"></span>
+        <button
+          id="bestBtn"
+          class="filterBtn cursor-pointer mx-3 hover:border-b-2 hover:border-gray-700 hover:font-bold"
+        >
+          BEST SALE
+        </button>
+        <span class="flex-grow border-b border-gray-300 ml-4"></span>
+      </div>
 
-    <!-- توسط js اضافه میشود -->
-    <div
-      id="products"
-      class="m-7 grid grid-cols-1 md:grid-cols-3 md:px-20 lg:grid-cols-5 lg:px-32 gap-3"
-    >
-    </div>
+      <!-- توسط js اضافه میشود -->
+      <div
+        id="products"
+        class="m-7 grid grid-cols-1 md:grid-cols-3 md:px-20 lg:grid-cols-5 lg:px-32 gap-3"
+      ></div>
 
-    <div class="flex justify-center items-center">
-      <button id="loadMoreBtn" class="cursor-pointer border py-1 px-10 m-10 hover:bg-slate-300">
-        LOAD MORE ITEMS
-      </button>
-    </div>
+      <div class="flex justify-center items-center">
+        <button
+          id="loadMoreBtn"
+          class="cursor-pointer border py-1 px-10 m-10 hover:bg-slate-300"
+        >
+          LOAD MORE ITEMS
+        </button>
+      </div>
+    </section>
   </body>
   <script src="index.js"></script>
 </html>
