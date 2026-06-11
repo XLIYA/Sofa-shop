@@ -1,54 +1,25 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cart Modal</title>
-    <link rel="stylesheet" href="modal.css">
+    <script src="tailwind.js"></script>
 </head>
-<body>
 
-    <button id="openCart">Show Cart</button>
+<body class="bg-neutral-100 font-serif text-[#2f2f2f]">
 
-    <div class="modal-overlay" id="cartOverlay">
-        <div class="modal-content">
+    <button id="openCart"
+        class="m-6 border border-gray-200 bg-white px-5 py-3 text-sm font-bold uppercase hover:bg-black hover:text-white">Show
+        Cart</button>
 
-            <div class="cart-items">
-                
-                <div class="item">
-                    <div class="img-container">
-                        <img src="img/IMG_7775.jpeg" alt="product">
-                    </div>
-                    <div class="details">
-                        <span class="product-name">Modular Modern</span>
-                        <span class="product-price">$ 540.00</span>
-                    </div>
-                    <button class="close-item">×</button>
-                </div>
-
-             
-                
-                <div class="item">
-                    <div class="img-container">
-                        <img src="img/IMG_7778.jpeg" alt="product">
-                    </div>
-                    <div class="details">
-                        <span class="product-name">Modular Modern</span>
-                        <span class="product-price">$ 540.00</span>
-                    </div>
-                    <button class="close-item">×</button>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <div class="total-line">
-                    <span class="label">Total:</span>
-                    <span class="amount">$ 540.00</span>
-                </div>
-                <button class="btn-checkout">CHECK OUT</button>
-            </div>
+    <div class="fixed inset-0 z-[1000] hidden bg-black/20" id="cartOverlay">
+        <div class="absolute right-8 top-8 w-[360px] bg-white p-4 shadow" data-cart-preview>
+            <div class="py-8 text-center text-gray-500">Loading cart...</div>
         </div>
     </div>
 
-    <script src="modal.js"></script>
+    <script src="modal.js" type="module"></script>
 </body>
+
 </html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail | Sofa Shop</title>
+  <script src="tailwind.js"></script>
+</head>
+
+<body class="bg-white font-serif text-[#2f2f2f]">
+  <header class="mx-auto mt-2 w-full max-w-[1510px] border-y-2 border-dashed border-gray-400">
+    <div class="flex min-h-[66px] items-center justify-between gap-8 px-1">
+      <nav
+        class="flex items-center gap-[38px] overflow-x-auto whitespace-nowrap text-[16px] font-bold uppercase leading-none"
+        aria-label="Primary navigation">
+        <a class="hover:text-[#ef4444]" href="index.html">Home</a>
+        <a class="text-[#ef4444]" href="#">Furniture</a>
+        <a class="hover:text-[#ef4444]" href="all-product.html">All Products</a>
+        <a class="hover:text-[#ef4444]" href="#">Shop</a>
+        <a class="hover:text-[#ef4444]" href="#">Mobile</a>
+        <a class="hover:text-[#ef4444]" href="#">Offer</a>
+        <a class="hover:text-[#ef4444]" href="#">Deal</a>
+        <a class="hover:text-[#ef4444]" href="#">Blog</a>
+        <a class="hover:text-[#ef4444]" href="#">Contact Us</a>
+        <a class="hover:text-[#ef4444]" href="#">Custom Menu</a>
+      </nav>
+      <div class="flex shrink-0 items-center gap-[18px]">
+        <button class="flex items-center text-[#2f2f2f] hover:text-[#ef4444]" type="button" aria-label="Search"><svg
+            class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m21 21-4.35-4.35m1.35-5.4a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0Z" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" />
+          </svg></button>
+        <span class="h-[35px] w-px bg-gray-200"></span>
+        <div class="group relative flex self-stretch items-center">
+          <a class="flex items-center gap-2 hover:text-[#ef4444]" href="all-product.html"
+            aria-label="Shopping cart"><svg class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none"
+              aria-hidden="true">
+              <circle cx="9" cy="20" r="1.5" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.8" />
+              <path d="M3 4h2l2.5 11h10.7L21 7H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg><span><span class="text-[#ef4444]">3</span> ( items )</span></a>
+          <div
+            data-cart-preview
+            class="invisible absolute right-0 top-full z-50 w-[380px] max-w-[calc(100vw-16px)] translate-y-2 border border-gray-100 bg-white p-4 opacity-0 shadow-sm transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+            <div class="py-8 text-center text-gray-500">Loading cart...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto w-full max-w-[1510px] px-0 pb-12 pt-4">
+    <section id="product-detail-root" aria-live="polite"></section>
+  </main>
+
+  <script src="pages/product-detail-page.js" type="module"></script>
+</body>
+
+</html>

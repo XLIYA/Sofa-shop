@@ -1,22 +1,67 @@
 {
-  "product": [
+  "$schema": "./node_modules/json-server/schema.json",
+  "tabs": [
+    {
+      "id": "latest",
+      "label": "LATEST",
+      "endpoint": "products",
+      "query": {
+        "_sort": "-create_date"
+      },
+      "limit": 9
+    },
+    {
+      "id": "on-sale",
+      "label": "SALE OFF",
+      "endpoint": "products",
+      "query": {
+        "sale": "true"
+      },
+      "limit": 9
+    },
+    {
+      "id": "best-sellers",
+      "label": "BEST SALE",
+      "endpoint": "products",
+      "query": {
+        "best_sale": "true"
+      },
+      "limit": 9
+    }
+  ],
+  "products": [
     {
       "id": 1,
       "name": "Cotton Wood Three Seater Sofa",
       "price": "999$",
       "discount": "10%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/09/cotton-wood-gray-and-cream-color-three-seater-frontview-sofa.jpg",
+      "image_url": "assets/images/product-01.png",
       "rating": 5,
-      "size": 8,
-      "color": "gray cream",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94",
+        "#F5E8D0"
+      ],
       "comments": "Comfortable three seater sofa with wooden frame and fabric cushions.",
       "review": 18,
-      "productTag": ["wood", "fabric"],
+      "productTag": [
+        "wood",
+        "fabric"
+      ],
       "stock": 20,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-12"
+      "create_date": "2026-02-12",
+      "best_sale": true,
+      "image": "assets/images/product-01.png",
+      "suggest_group_label": "Office chair",
+      "suggest_category_order": 1,
+      "suggest_category_label": "Lorem Ipsum is",
+      "suggest_category_image": "assets/images/suggest-product-1.png"
     },
     {
       "id": 2,
@@ -24,17 +69,30 @@
       "price": "899$",
       "discount": "8%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/front-5.jpg",
+      "image_url": "assets/images/product-02.png",
       "rating": 4,
-      "size": 8,
-      "color": "gray",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Modern gray three seater sofa suitable for living rooms and office lounges.",
       "review": 14,
-      "productTag": ["fabric", "modern"],
+      "productTag": [
+        "fabric",
+        "modern"
+      ],
       "stock": 15,
       "new": false,
       "sale": true,
-      "create_date": "2026-02-13"
+      "create_date": "2026-02-13",
+      "best_sale": false,
+      "image": "assets/images/product-02.png",
+      "suggest_category_order": 2,
+      "suggest_category_label": "Outdoor table",
+      "suggest_category_image": "assets/images/suggest-product-2.png"
     },
     {
       "id": 3,
@@ -42,17 +100,31 @@
       "price": "929$",
       "discount": "9%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/persp-4.jpg",
+      "image_url": "assets/images/product-03.png",
       "rating": 5,
-      "size": 8,
-      "color": "gray black",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#000000",
+        "#8A8F94"
+      ],
       "comments": "Box style sofa with strong side arms and clean modern design.",
       "review": 21,
-      "productTag": ["fabric", "wood"],
+      "productTag": [
+        "fabric",
+        "wood"
+      ],
       "stock": 12,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-14"
+      "create_date": "2026-02-14",
+      "best_sale": true,
+      "image": "assets/images/product-03.png",
+      "suggest_category_order": 3,
+      "suggest_category_label": "Coffee chair",
+      "suggest_category_image": "assets/images/suggest-product-3.png"
     },
     {
       "id": 4,
@@ -60,17 +132,30 @@
       "price": "849$",
       "discount": "7%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/side-12.jpg",
+      "image_url": "assets/images/product-04.png",
       "rating": 4,
-      "size": 7,
-      "color": "gray",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Compact sofa with strong structure and practical seating depth.",
       "review": 9,
-      "productTag": ["compact", "fabric"],
+      "productTag": [
+        "compact",
+        "fabric"
+      ],
       "stock": 17,
       "new": false,
       "sale": false,
-      "create_date": "2026-02-15"
+      "create_date": "2026-02-15",
+      "best_sale": false,
+      "image": "assets/images/product-04.png",
+      "suggest_category_order": 4,
+      "suggest_category_label": "Good chair",
+      "suggest_category_image": "assets/images/suggest-product-4.png"
     },
     {
       "id": 5,
@@ -78,17 +163,30 @@
       "price": "879$",
       "discount": "5%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/back-12.jpg",
+      "image_url": "assets/images/product-05.png",
       "rating": 4,
-      "size": 7,
-      "color": "gray",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Simple sofa with clean back design for home and reception areas.",
       "review": 11,
-      "productTag": ["fabric", "classic"],
+      "productTag": [
+        "fabric",
+        "classic"
+      ],
       "stock": 13,
       "new": false,
       "sale": true,
-      "create_date": "2026-02-16"
+      "create_date": "2026-02-16",
+      "best_sale": false,
+      "image": "assets/images/product-05.png",
+      "suggest_category_order": 5,
+      "suggest_category_label": "Leather Sofa",
+      "suggest_category_image": "assets/images/suggest-product-5.png"
     },
     {
       "id": 6,
@@ -96,17 +194,31 @@
       "price": "1299$",
       "discount": "12%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-LHS-Three-Seater-Sofa-spns-Furniture.jpg",
+      "image_url": "assets/images/product-06.png",
       "rating": 5,
-      "size": 10,
-      "color": "brown cream",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B",
+        "#F5E8D0"
+      ],
       "comments": "Large L-shape sofa with lounger section and soft back cushions.",
       "review": 25,
-      "productTag": ["l-shape", "fabric"],
+      "productTag": [
+        "l-shape",
+        "fabric"
+      ],
       "stock": 8,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-17"
+      "create_date": "2026-02-17",
+      "best_sale": true,
+      "image": "assets/images/product-06.png",
+      "suggest_category_order": 6,
+      "suggest_category_label": "Office chair",
+      "suggest_category_image": "assets/images/suggest-product-6.png"
     },
     {
       "id": 7,
@@ -114,17 +226,31 @@
       "price": "1349$",
       "discount": "10%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-LHS-Three-Seater-Sofas-spns-Furniture.jpg",
+      "image_url": "assets/images/product-07.png",
       "rating": 5,
-      "size": 10,
-      "color": "brown cream",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B",
+        "#F5E8D0"
+      ],
       "comments": "Spacious lounger sofa with measured layout and elegant fabric finish.",
       "review": 19,
-      "productTag": ["large", "modern"],
+      "productTag": [
+        "large",
+        "modern"
+      ],
       "stock": 6,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-18"
+      "create_date": "2026-02-18",
+      "best_sale": true,
+      "image": "assets/images/product-07.png",
+      "suggest_category_order": 7,
+      "suggest_category_label": "Computer chair",
+      "suggest_category_image": "assets/images/suggest-product-7.png"
     },
     {
       "id": 8,
@@ -132,17 +258,30 @@
       "price": "1199$",
       "discount": "8%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-LHS-Three-Seater-Sofa-back-view-spns-Furniture.jpg",
+      "image_url": "assets/images/product-08.png",
       "rating": 4,
-      "size": 9,
-      "color": "brown",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Large sofa with clean rear structure and premium lounge seating.",
       "review": 13,
-      "productTag": ["l-shape", "premium"],
+      "productTag": [
+        "l-shape",
+        "premium"
+      ],
       "stock": 9,
       "new": false,
       "sale": true,
-      "create_date": "2026-02-19"
+      "create_date": "2026-02-19",
+      "best_sale": false,
+      "image": "assets/images/product-08.png",
+      "suggest_category_order": 8,
+      "suggest_category_label": "Office chair",
+      "suggest_category_image": "assets/images/suggest-product-8.png"
     },
     {
       "id": 9,
@@ -150,17 +289,28 @@
       "price": "1249$",
       "discount": "11%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-Lounger-L-Shape-Sofa.jpg",
+      "image_url": "assets/images/product-09.png",
       "rating": 5,
-      "size": 10,
-      "color": "brown cream",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B",
+        "#F5E8D0"
+      ],
       "comments": "Premium L-shape sofa designed for spacious living rooms.",
       "review": 28,
-      "productTag": ["premium", "comfort"],
+      "productTag": [
+        "premium",
+        "comfort"
+      ],
       "stock": 7,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-20"
+      "create_date": "2026-02-20",
+      "best_sale": true,
+      "image": "assets/images/product-09.png"
     },
     {
       "id": 10,
@@ -168,17 +318,28 @@
       "price": "1099$",
       "discount": "7%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-Lounger-L-Shape-Sofa-Front-View.jpg",
+      "image_url": "assets/images/product-10.jpg",
       "rating": 4,
-      "size": 9,
-      "color": "brown cream",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B",
+        "#F5E8D0"
+      ],
       "comments": "Comfortable side lounger sofa with simple fabric finish.",
       "review": 12,
-      "productTag": ["lounge", "fabric"],
+      "productTag": [
+        "lounge",
+        "fabric"
+      ],
       "stock": 10,
       "new": false,
       "sale": false,
-      "create_date": "2026-02-21"
+      "create_date": "2026-02-21",
+      "best_sale": false,
+      "image": "assets/images/product-10.jpg"
     },
     {
       "id": 11,
@@ -186,17 +347,28 @@
       "price": "699$",
       "discount": "10%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/Saffron-two-seater-coffee-colour-sofa-by-spns-700x490.jpg",
+      "image_url": "assets/images/product-11.jpg",
       "rating": 4,
-      "size": 6,
-      "color": "coffee brown",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#6F4E37",
+        "#8B5A2B"
+      ],
       "comments": "Compact two seater sofa suitable for small living rooms.",
       "review": 10,
-      "productTag": ["compact", "fabric"],
+      "productTag": [
+        "compact",
+        "fabric"
+      ],
       "stock": 18,
       "new": false,
       "sale": true,
-      "create_date": "2026-02-22"
+      "create_date": "2026-02-22",
+      "best_sale": false,
+      "image": "assets/images/product-11.jpg"
     },
     {
       "id": 12,
@@ -204,17 +376,27 @@
       "price": "949$",
       "discount": "9%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/Bangkok-Three-Seater-Brown-colour-Sofa-by-Spns.jpg",
+      "image_url": "assets/images/product-12.jpg",
       "rating": 5,
-      "size": 8,
-      "color": "brown",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Three seater sofa with warm brown fabric and classic appearance.",
       "review": 16,
-      "productTag": ["classic", "fabric"],
+      "productTag": [
+        "classic",
+        "fabric"
+      ],
       "stock": 11,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-23"
+      "create_date": "2026-02-23",
+      "best_sale": true,
+      "image": "assets/images/product-12.jpg"
     },
     {
       "id": 13,
@@ -222,17 +404,27 @@
       "price": "859$",
       "discount": "6%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Erica-Three-Seater-Sofa-SPNS-Furniture.jpg",
+      "image_url": "assets/images/product-13.jpg",
       "rating": 4,
-      "size": 8,
-      "color": "beige",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#D8C3A5"
+      ],
       "comments": "Elegant three seater sofa with soft cushions and clean lines.",
       "review": 15,
-      "productTag": ["fabric", "elegant"],
+      "productTag": [
+        "fabric",
+        "elegant"
+      ],
       "stock": 14,
       "new": false,
       "sale": true,
-      "create_date": "2026-02-24"
+      "create_date": "2026-02-24",
+      "best_sale": false,
+      "image": "assets/images/product-13.jpg"
     },
     {
       "id": 14,
@@ -240,17 +432,27 @@
       "price": "979$",
       "discount": "10%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/Bangkok-Three-Seater-Brown-colour-Sofa-by-Spns-dimentions.jpg",
+      "image_url": "assets/images/product-14.jpg",
       "rating": 4,
-      "size": 8,
-      "color": "brown",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Three seater sofa with dimension view and strong fabric body.",
       "review": 7,
-      "productTag": ["fabric", "three-seater"],
+      "productTag": [
+        "fabric",
+        "three-seater"
+      ],
       "stock": 9,
       "new": false,
       "sale": false,
-      "create_date": "2026-02-25"
+      "create_date": "2026-02-25",
+      "best_sale": false,
+      "image": "assets/images/product-14.jpg"
     },
     {
       "id": 15,
@@ -258,17 +460,27 @@
       "price": "899$",
       "discount": "8%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Erica-Three-Seater-Sofa-set-dimension-SPNS-Furniture.jpg",
+      "image_url": "assets/images/product-15.jpg",
       "rating": 5,
-      "size": 8,
-      "color": "beige",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#D8C3A5"
+      ],
       "comments": "Three seater sofa with dimension details and comfortable seating.",
       "review": 17,
-      "productTag": ["comfort", "fabric"],
+      "productTag": [
+        "comfort",
+        "fabric"
+      ],
       "stock": 12,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-26"
+      "create_date": "2026-02-26",
+      "best_sale": true,
+      "image": "assets/images/product-15.jpg"
     },
     {
       "id": 16,
@@ -276,17 +488,27 @@
       "price": "799$",
       "discount": "5%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2025/04/A-Plus-Image.jpg",
+      "image_url": "assets/images/product-16.jpg",
       "rating": 3,
-      "size": 7,
-      "color": "gray",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Promotional sofa image suitable for product banner or featured item.",
       "review": 6,
-      "productTag": ["featured", "modern"],
+      "productTag": [
+        "featured",
+        "modern"
+      ],
       "stock": 20,
       "new": true,
       "sale": false,
-      "create_date": "2026-02-27"
+      "create_date": "2026-02-27",
+      "best_sale": false,
+      "image": "assets/images/product-16.jpg"
     },
     {
       "id": 17,
@@ -294,17 +516,28 @@
       "price": "1050$",
       "discount": "13%",
       "category": "sofa",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/09/cotton-wood-gray-and-cream-color-three-seater-frontview-sofa.jpg",
+      "image_url": "assets/images/product-17.jpg",
       "rating": 5,
-      "size": 8,
-      "color": "gray cream",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94",
+        "#F5E8D0"
+      ],
       "comments": "Office style sofa suitable for waiting rooms and reception areas.",
       "review": 20,
-      "productTag": ["office", "wood"],
+      "productTag": [
+        "office",
+        "wood"
+      ],
       "stock": 10,
       "new": true,
       "sale": true,
-      "create_date": "2026-02-28"
+      "create_date": "2026-02-28",
+      "best_sale": true,
+      "image": "assets/images/product-17.jpg"
     },
     {
       "id": 18,
@@ -312,17 +545,26 @@
       "price": "199$",
       "discount": "10%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-18.jpg",
       "rating": 4,
-      "size": 4,
-      "color": "red",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Small wooden chair with red fabric upholstery for living spaces.",
       "review": 12,
-      "productTag": ["wood", "fabric"],
+      "productTag": [
+        "wood",
+        "fabric"
+      ],
       "stock": 24,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-01"
+      "create_date": "2026-03-01",
+      "best_sale": false,
+      "image": "assets/images/product-18.jpg"
     },
     {
       "id": 19,
@@ -330,17 +572,26 @@
       "price": "99$",
       "discount": "5%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/LAISE-POUFFY-1.jpg",
+      "image_url": "assets/images/product-19.jpg",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Small blue puffy stool suitable for extra seating.",
       "review": 9,
-      "productTag": ["fabric", "handmade"],
+      "productTag": [
+        "fabric",
+        "handmade"
+      ],
       "stock": 30,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-02"
+      "create_date": "2026-03-02",
+      "best_sale": false,
+      "image": "assets/images/product-19.jpg"
     },
     {
       "id": 20,
@@ -348,107 +599,204 @@
       "price": "109$",
       "discount": "6%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/lace-puffy.jpg",
+      "image_url": "assets/images/product-20.jpg",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Compact fabric stool with decorative side lace design.",
       "review": 8,
-      "productTag": ["fabric", "small"],
+      "productTag": [
+        "fabric",
+        "small"
+      ],
       "stock": 22,
       "new": true,
       "sale": false,
-      "create_date": "2026-03-03"
+      "create_date": "2026-03-03",
+      "best_sale": false,
+      "image": "assets/images/product-20.jpg"
     },
     {
       "id": 21,
-      "name": "Arm Wooden Chair",
-      "price": "249$",
+      "name": "Modular Modern",
+      "price": "540$",
       "discount": "8%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/ARM-CHAIR.jpg",
+      "image_url": "assets/images/product-01.png",
       "rating": 5,
-      "size": 5,
-      "color": "cream",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Wooden arm chair with soft seating for lounge and reception areas.",
       "review": 14,
-      "productTag": ["wood", "armchair"],
+      "productTag": [
+        "wood",
+        "armchair"
+      ],
       "stock": 15,
-      "new": true,
+      "new": false,
       "sale": true,
-      "create_date": "2026-03-04"
+      "create_date": "2026-03-04",
+      "best_sale": true,
+      "image": "assets/images/product-01.png",
+      "suggest_product_order": 1,
+      "suggest_product_image": "assets/images/suggest-product-9.png",
+      "suggest_title": "Modular Modern",
+      "suggest_price": "540$",
+      "cart_order": 1,
+      "cart_image": "assets/images/cart-item-desk.png",
+      "cart_title": "Modular Modern",
+      "cart_price": "540$"
     },
     {
       "id": 22,
-      "name": "Classic Red Chair",
-      "price": "179$",
+      "name": "Modular Modern",
+      "price": "540$",
       "discount": "7%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-02.png",
       "rating": 3,
-      "size": 4,
-      "color": "red",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Simple red chair suitable for small rooms and accent decoration.",
       "review": 5,
-      "productTag": ["accent", "fabric"],
+      "productTag": [
+        "accent",
+        "fabric"
+      ],
       "stock": 28,
-      "new": false,
+      "new": true,
       "sale": true,
-      "create_date": "2026-03-05"
+      "create_date": "2026-03-05",
+      "best_sale": false,
+      "image": "assets/images/product-02.png",
+      "suggest_product_order": 2,
+      "suggest_product_image": "assets/images/product-detail-table.jpg",
+      "suggest_title": "Modular Modern",
+      "suggest_price": "540$",
+      "cart_order": 2,
+      "cart_image": "assets/images/cart-item-sofa.png",
+      "cart_title": "Modular Modern",
+      "cart_price": "540$"
     },
     {
       "id": 23,
-      "name": "Blue Fabric Stool",
-      "price": "89$",
+      "name": "Modular Modern",
+      "price": "540$",
       "discount": "4%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/LAISE-POUFFY-1.jpg",
+      "image_url": "assets/images/product-03.png",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Soft blue stool for living room, bedroom, or dressing area.",
       "review": 7,
-      "productTag": ["fabric", "comfort"],
+      "productTag": [
+        "fabric",
+        "comfort"
+      ],
       "stock": 35,
       "new": false,
       "sale": false,
-      "create_date": "2026-03-06"
+      "create_date": "2026-03-06",
+      "best_sale": false,
+      "image": "assets/images/product-03.png",
+      "suggest_product_order": 3,
+      "suggest_product_image": "assets/images/product-17.jpg",
+      "suggest_title": "Modular Modern",
+      "suggest_price": "540$",
+      "suggest_old_price": "600$",
+      "cart_order": 3,
+      "cart_image": "assets/images/cart-item-chair.png",
+      "cart_title": "Modular Modern",
+      "cart_price": "540$"
     },
     {
       "id": 24,
-      "name": "Decorative Puffy Chair",
-      "price": "129$",
+      "name": "Modular Modern",
+      "price": "540$",
       "discount": "9%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/lace-puffy.jpg",
+      "image_url": "assets/images/product-04.png",
       "rating": 5,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Decorative puffy chair with compact size and soft fabric cover.",
       "review": 11,
-      "productTag": ["decorative", "fabric"],
+      "productTag": [
+        "decorative",
+        "fabric"
+      ],
       "stock": 19,
       "new": true,
-      "sale": true,
-      "create_date": "2026-03-07"
+      "sale": false,
+      "create_date": "2026-03-07",
+      "best_sale": true,
+      "image": "assets/images/product-04.png",
+      "suggest_product_order": 4,
+      "suggest_product_image": "assets/images/product-14.jpg",
+      "suggest_title": "Modular Modern",
+      "suggest_price": "540$",
+      "most_viewed_order": 1,
+      "most_viewed_image": "assets/images/product-10.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 25,
-      "name": "Reception Wooden Chair",
-      "price": "229$",
+      "name": "Modular Modern",
+      "price": "540$",
       "discount": "10%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/ARM-CHAIR.jpg",
+      "image_url": "assets/images/product-05.png",
       "rating": 4,
-      "size": 5,
-      "color": "cream",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Comfortable wooden chair for reception and waiting areas.",
       "review": 10,
-      "productTag": ["wood", "office"],
+      "productTag": [
+        "wood",
+        "office"
+      ],
       "stock": 16,
-      "new": true,
-      "sale": true,
-      "create_date": "2026-03-08"
+      "new": false,
+      "sale": false,
+      "create_date": "2026-03-08",
+      "best_sale": false,
+      "image": "assets/images/product-05.png",
+      "suggest_product_order": 5,
+      "suggest_product_image": "assets/images/product-10.jpg",
+      "suggest_title": "Modular Modern",
+      "suggest_price": "540$",
+      "most_viewed_order": 2,
+      "most_viewed_image": "assets/images/product-detail-table.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 26,
@@ -456,17 +804,30 @@
       "price": "159$",
       "discount": "5%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-06.png",
       "rating": 3,
-      "size": 4,
-      "color": "red",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Compact chair with comfortable fabric seat and simple structure.",
       "review": 6,
-      "productTag": ["compact", "fabric"],
+      "productTag": [
+        "compact",
+        "fabric"
+      ],
       "stock": 27,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-09"
+      "create_date": "2026-03-09",
+      "best_sale": false,
+      "image": "assets/images/product-06.png",
+      "most_viewed_order": 3,
+      "most_viewed_image": "assets/images/product-17.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 27,
@@ -474,17 +835,30 @@
       "price": "119$",
       "discount": "6%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/LAISE-POUFFY-1.jpg",
+      "image_url": "assets/images/product-07.png",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Modern ottoman style chair for extra seating and decoration.",
       "review": 13,
-      "productTag": ["ottoman", "fabric"],
+      "productTag": [
+        "ottoman",
+        "fabric"
+      ],
       "stock": 23,
       "new": true,
       "sale": false,
-      "create_date": "2026-03-10"
+      "create_date": "2026-03-10",
+      "best_sale": false,
+      "image": "assets/images/product-07.png",
+      "most_viewed_order": 4,
+      "most_viewed_image": "assets/images/product-detail-table.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 28,
@@ -492,17 +866,30 @@
       "price": "109$",
       "discount": "5%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/lace-puffy.jpg",
+      "image_url": "assets/images/product-08.png",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Soft puffy seat for casual interiors and bedroom corners.",
       "review": 8,
-      "productTag": ["soft", "handmade"],
+      "productTag": [
+        "soft",
+        "handmade"
+      ],
       "stock": 31,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-11"
+      "create_date": "2026-03-11",
+      "best_sale": false,
+      "image": "assets/images/product-08.png",
+      "most_viewed_order": 5,
+      "most_viewed_image": "assets/images/product-14.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 29,
@@ -510,17 +897,31 @@
       "price": "299$",
       "discount": "11%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/ARM-CHAIR.jpg",
+      "image_url": "assets/images/product-09.png",
       "rating": 5,
-      "size": 6,
-      "color": "cream",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Lounge arm chair with solid structure and comfortable seating.",
       "review": 16,
-      "productTag": ["lounge", "wood"],
+      "productTag": [
+        "lounge",
+        "wood"
+      ],
       "stock": 12,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-12"
+      "create_date": "2026-03-12",
+      "best_sale": true,
+      "image": "assets/images/product-09.png",
+      "most_viewed_order": 6,
+      "most_viewed_image": "assets/images/product-15.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 30,
@@ -528,17 +929,30 @@
       "price": "189$",
       "discount": "8%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-10.jpg",
       "rating": 4,
-      "size": 4,
-      "color": "red",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Red accent chair for colorful home decoration.",
       "review": 9,
-      "productTag": ["accent", "modern"],
+      "productTag": [
+        "accent",
+        "modern"
+      ],
       "stock": 21,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-13"
+      "create_date": "2026-03-13",
+      "best_sale": false,
+      "image": "assets/images/product-10.jpg",
+      "most_viewed_order": 7,
+      "most_viewed_image": "assets/images/suggest-product-9.png",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 31,
@@ -546,17 +960,30 @@
       "price": "99$",
       "discount": "4%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/LAISE-POUFFY-1.jpg",
+      "image_url": "assets/images/product-11.jpg",
       "rating": 3,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Round stool with soft fabric body and light weight design.",
       "review": 4,
-      "productTag": ["round", "small"],
+      "productTag": [
+        "round",
+        "small"
+      ],
       "stock": 40,
       "new": false,
       "sale": false,
-      "create_date": "2026-03-14"
+      "create_date": "2026-03-14",
+      "best_sale": false,
+      "image": "assets/images/product-11.jpg",
+      "most_viewed_order": 8,
+      "most_viewed_image": "assets/images/product-17.jpg",
+      "most_viewed_title": "Modular Modern",
+      "most_viewed_price": "540$"
     },
     {
       "id": 32,
@@ -564,17 +991,26 @@
       "price": "169$",
       "discount": "5%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-12.jpg",
       "rating": 4,
-      "size": 4,
-      "color": "red",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Fabric side chair for living room and office corners.",
       "review": 8,
-      "productTag": ["fabric", "side-chair"],
+      "productTag": [
+        "fabric",
+        "side-chair"
+      ],
       "stock": 18,
       "new": true,
       "sale": false,
-      "create_date": "2026-03-15"
+      "create_date": "2026-03-15",
+      "best_sale": false,
+      "image": "assets/images/product-12.jpg"
     },
     {
       "id": 33,
@@ -582,17 +1018,27 @@
       "price": "329$",
       "discount": "12%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/ARM-CHAIR.jpg",
+      "image_url": "assets/images/product-13.jpg",
       "rating": 5,
-      "size": 6,
-      "color": "cream",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Premium arm chair with comfortable seating and strong wooden frame.",
       "review": 18,
-      "productTag": ["premium", "wood"],
+      "productTag": [
+        "premium",
+        "wood"
+      ],
       "stock": 10,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-16"
+      "create_date": "2026-03-16",
+      "best_sale": true,
+      "image": "assets/images/product-13.jpg"
     },
     {
       "id": 34,
@@ -600,35 +1046,57 @@
       "price": "139$",
       "discount": "7%",
       "category": "chair",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/lace-puffy.jpg",
+      "image_url": "assets/images/product-14.jpg",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Handmade style puffy chair suitable for cozy interiors.",
       "review": 12,
-      "productTag": ["handmade", "fabric"],
+      "productTag": [
+        "handmade",
+        "fabric"
+      ],
       "stock": 22,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-17"
+      "create_date": "2026-03-17",
+      "best_sale": false,
+      "image": "assets/images/product-14.jpg"
     },
     {
       "id": 35,
-      "name": "Modern Coffee Table",
-      "price": "299$",
-      "discount": "8%",
+      "name": "Modular Modern",
+      "price": "540$",
+      "discount": "0%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/front-5.jpg",
-      "rating": 4,
-      "size": 5,
-      "color": "gray black",
-      "comments": "Modern coffee table item for living room product listing.",
-      "review": 10,
-      "productTag": ["wood", "modern"],
+      "image_url": "assets/images/product-detail-table.jpg",
+      "rating": 3,
+      "size": [
+        "S",
+        "M",
+        "L"
+      ],
+      "color": [
+        "#C0392B",
+        "#2F80ED",
+        "#4CAF50"
+      ],
+      "comments": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel magna quis risus commodo porttitor. Praesent rutrum lectus diam, ac consequat dolor hendrerit sit amet.",
+      "review": 12,
+      "productTag": [
+        "modern",
+        "table"
+      ],
       "stock": 18,
       "new": true,
-      "sale": true,
-      "create_date": "2026-03-18"
+      "sale": false,
+      "create_date": "2026-03-18",
+      "best_sale": true,
+      "image": "assets/images/product-detail-table.jpg"
     },
     {
       "id": 36,
@@ -636,17 +1104,27 @@
       "price": "249$",
       "discount": "6%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/persp-4.jpg",
+      "image_url": "assets/images/product-16.jpg",
       "rating": 4,
-      "size": 5,
-      "color": "gray",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Classic center table for living room and office waiting space.",
       "review": 7,
-      "productTag": ["classic", "wood"],
+      "productTag": [
+        "classic",
+        "wood"
+      ],
       "stock": 16,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-19"
+      "create_date": "2026-03-19",
+      "best_sale": false,
+      "image": "assets/images/product-16.jpg"
     },
     {
       "id": 37,
@@ -654,17 +1132,27 @@
       "price": "199$",
       "discount": "5%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/side-12.jpg",
+      "image_url": "assets/images/product-17.jpg",
       "rating": 3,
-      "size": 4,
-      "color": "black gray",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#000000",
+        "#8A8F94"
+      ],
       "comments": "Small side table for compact interiors and sofa corners.",
       "review": 6,
-      "productTag": ["small", "wood"],
+      "productTag": [
+        "small",
+        "wood"
+      ],
       "stock": 25,
       "new": false,
       "sale": false,
-      "create_date": "2026-03-20"
+      "create_date": "2026-03-20",
+      "best_sale": false,
+      "image": "assets/images/product-17.jpg"
     },
     {
       "id": 38,
@@ -672,17 +1160,27 @@
       "price": "349$",
       "discount": "10%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/back-12.jpg",
+      "image_url": "assets/images/product-18.jpg",
       "rating": 4,
-      "size": 6,
-      "color": "gray",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Office center table suitable for reception and meeting lounge.",
       "review": 11,
-      "productTag": ["office", "modern"],
+      "productTag": [
+        "office",
+        "modern"
+      ],
       "stock": 12,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-21"
+      "create_date": "2026-03-21",
+      "best_sale": false,
+      "image": "assets/images/product-18.jpg"
     },
     {
       "id": 39,
@@ -690,17 +1188,27 @@
       "price": "399$",
       "discount": "9%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-LHS-Three-Seater-Sofa-spns-Furniture.jpg",
+      "image_url": "assets/images/product-19.jpg",
       "rating": 5,
-      "size": 7,
-      "color": "brown",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Premium lounge table item for modern product collections.",
       "review": 14,
-      "productTag": ["premium", "lounge"],
+      "productTag": [
+        "premium",
+        "lounge"
+      ],
       "stock": 9,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-22"
+      "create_date": "2026-03-22",
+      "best_sale": true,
+      "image": "assets/images/product-19.jpg"
     },
     {
       "id": 40,
@@ -708,17 +1216,26 @@
       "price": "179$",
       "discount": "4%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-LHS-Three-Seater-Sofas-spns-Furniture.jpg",
+      "image_url": "assets/images/product-20.jpg",
       "rating": 3,
-      "size": 4,
-      "color": "cream",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Minimal coffee table item for clean and simple interiors.",
       "review": 5,
-      "productTag": ["minimal", "compact"],
+      "productTag": [
+        "minimal",
+        "compact"
+      ],
       "stock": 30,
       "new": false,
       "sale": false,
-      "create_date": "2026-03-23"
+      "create_date": "2026-03-23",
+      "best_sale": false,
+      "image": "assets/images/product-20.jpg"
     },
     {
       "id": 41,
@@ -726,17 +1243,27 @@
       "price": "449$",
       "discount": "11%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-Lounger-L-Shape-Sofa.jpg",
+      "image_url": "assets/images/product-01.png",
       "rating": 5,
-      "size": 8,
-      "color": "brown",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Large living room table item for spacious interior layouts.",
       "review": 15,
-      "productTag": ["large", "living-room"],
+      "productTag": [
+        "large",
+        "living-room"
+      ],
       "stock": 8,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-24"
+      "create_date": "2026-03-24",
+      "best_sale": true,
+      "image": "assets/images/product-01.png"
     },
     {
       "id": 42,
@@ -744,17 +1271,27 @@
       "price": "379$",
       "discount": "7%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/11/Aster-Lounger-L-Shape-Sofa-Front-View.jpg",
+      "image_url": "assets/images/product-02.png",
       "rating": 4,
-      "size": 6,
-      "color": "brown",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Handmade wooden table item for warm home decoration.",
       "review": 9,
-      "productTag": ["wood", "handmade"],
+      "productTag": [
+        "wood",
+        "handmade"
+      ],
       "stock": 13,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-25"
+      "create_date": "2026-03-25",
+      "best_sale": false,
+      "image": "assets/images/product-02.png"
     },
     {
       "id": 43,
@@ -762,17 +1299,26 @@
       "price": "149$",
       "discount": "5%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/LAISE-POUFFY-1.jpg",
+      "image_url": "assets/images/product-03.png",
       "rating": 3,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Compact bedside table item for bedrooms and small corners.",
       "review": 4,
-      "productTag": ["compact", "small"],
+      "productTag": [
+        "compact",
+        "small"
+      ],
       "stock": 28,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-26"
+      "create_date": "2026-03-26",
+      "best_sale": false,
+      "image": "assets/images/product-03.png"
     },
     {
       "id": 44,
@@ -780,17 +1326,26 @@
       "price": "169$",
       "discount": "6%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/lace-puffy.jpg",
+      "image_url": "assets/images/product-04.png",
       "rating": 4,
-      "size": 3,
-      "color": "blue",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#2F80ED"
+      ],
       "comments": "Round side table item for modern living room decoration.",
       "review": 6,
-      "productTag": ["round", "decorative"],
+      "productTag": [
+        "round",
+        "decorative"
+      ],
       "stock": 24,
       "new": true,
       "sale": false,
-      "create_date": "2026-03-27"
+      "create_date": "2026-03-27",
+      "best_sale": false,
+      "image": "assets/images/product-04.png"
     },
     {
       "id": 45,
@@ -798,17 +1353,27 @@
       "price": "299$",
       "discount": "10%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/ARM-CHAIR.jpg",
+      "image_url": "assets/images/product-05.png",
       "rating": 4,
-      "size": 6,
-      "color": "cream",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#F5E8D0"
+      ],
       "comments": "Reception table item suitable for office and customer waiting rooms.",
       "review": 12,
-      "productTag": ["office", "reception"],
+      "productTag": [
+        "office",
+        "reception"
+      ],
       "stock": 11,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-28"
+      "create_date": "2026-03-28",
+      "best_sale": false,
+      "image": "assets/images/product-05.png"
     },
     {
       "id": 46,
@@ -816,17 +1381,27 @@
       "price": "329$",
       "discount": "8%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/05/SMALL-WOODEN-CHAIR-1.jpg",
+      "image_url": "assets/images/product-06.png",
       "rating": 4,
-      "size": 6,
-      "color": "red",
+      "size": [
+        "S",
+        "M"
+      ],
+      "color": [
+        "#C0392B"
+      ],
       "comments": "Modern study table item for home office product listing.",
       "review": 10,
-      "productTag": ["study", "modern"],
+      "productTag": [
+        "study",
+        "modern"
+      ],
       "stock": 17,
       "new": false,
       "sale": true,
-      "create_date": "2026-03-29"
+      "create_date": "2026-03-29",
+      "best_sale": false,
+      "image": "assets/images/product-06.png"
     },
     {
       "id": 47,
@@ -834,17 +1409,27 @@
       "price": "599$",
       "discount": "12%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2025/04/A-Plus-Image.jpg",
+      "image_url": "assets/images/product-07.png",
       "rating": 5,
-      "size": 8,
-      "color": "gray",
+      "size": [
+        "M",
+        "L"
+      ],
+      "color": [
+        "#8A8F94"
+      ],
       "comments": "Premium office desk item for workspace and professional interiors.",
       "review": 18,
-      "productTag": ["office", "premium"],
+      "productTag": [
+        "office",
+        "premium"
+      ],
       "stock": 7,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-30"
+      "create_date": "2026-03-30",
+      "best_sale": true,
+      "image": "assets/images/product-07.png"
     },
     {
       "id": 48,
@@ -852,17 +1437,27 @@
       "price": "699$",
       "discount": "10%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2020/09/cotton-wood-gray-and-cream-color-three-seater-frontview-sofa.jpg",
+      "image_url": "assets/images/product-08.png",
       "rating": 5,
-      "size": 9,
-      "color": "wood",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#A46A3A"
+      ],
       "comments": "Wooden dining table item for family and home dining spaces.",
       "review": 20,
-      "productTag": ["wood", "dining"],
+      "productTag": [
+        "wood",
+        "dining"
+      ],
       "stock": 6,
       "new": true,
       "sale": true,
-      "create_date": "2026-03-31"
+      "create_date": "2026-03-31",
+      "best_sale": true,
+      "image": "assets/images/product-08.png"
     },
     {
       "id": 49,
@@ -870,17 +1465,27 @@
       "price": "189$",
       "discount": "5%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/Saffron-two-seater-coffee-colour-sofa-by-spns-700x490.jpg",
+      "image_url": "assets/images/product-09.png",
       "rating": 3,
-      "size": 4,
-      "color": "coffee brown",
+      "size": [
+        "S"
+      ],
+      "color": [
+        "#6F4E37",
+        "#8B5A2B"
+      ],
       "comments": "Small laptop table item for compact rooms and casual work.",
       "review": 8,
-      "productTag": ["laptop", "compact"],
+      "productTag": [
+        "laptop",
+        "compact"
+      ],
       "stock": 22,
       "new": false,
       "sale": false,
-      "create_date": "2026-04-01"
+      "create_date": "2026-04-01",
+      "best_sale": false,
+      "image": "assets/images/product-09.png"
     },
     {
       "id": 50,
@@ -888,18 +1493,27 @@
       "price": "999$",
       "discount": "15%",
       "category": "table",
-      "image_url": "https://spnsfurniture.com/wp-content/uploads/2019/12/Bangkok-Three-Seater-Brown-colour-Sofa-by-Spns.jpg",
+      "image_url": "assets/images/product-10.jpg",
       "rating": 5,
-      "size": 10,
-      "color": "brown",
+      "size": [
+        "L",
+        "XL"
+      ],
+      "color": [
+        "#8B5A2B"
+      ],
       "comments": "Luxury meeting table item for conference rooms and office interiors.",
       "review": 24,
-      "productTag": ["luxury", "office"],
+      "productTag": [
+        "luxury",
+        "office"
+      ],
       "stock": 5,
       "new": true,
       "sale": true,
-      "create_date": "2026-04-02"
+      "create_date": "2026-04-02",
+      "best_sale": true,
+      "image": "assets/images/product-10.jpg"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

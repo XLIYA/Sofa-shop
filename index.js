@@ -1,7 +1,9 @@
-import { layout } from "./components/layout.js"
-import { getProducts } from "./component/tabs-section.js"
-import {renderProducts, setActiveButton, getFinalPrice, productCard, filterProducts } from "./component/tabs-section.js";
+import { initCartPreviews } from "./components/cart-preview.js";
+import { initMostViewedSection } from "./components/most-viewed-section.js";
+import { initTabsSection } from "./components/tabs-section.js";
+import { initSuggestCollection } from "./components/suggest-collection.js";
 
-document.getElementById("app").innerHTML = layout()
-
-getProducts()
+initCartPreviews();
+initTabsSection(document.getElementById("app"));
+initSuggestCollection(document.getElementById("suggest-collection"));
+initMostViewedSection(document.getElementById("most-viewed-section"));
