@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart Modal</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+    <button id="openCart">Show Cart</button>
+
+    <div class="modal-overlay" id="cartOverlay">
+        <div class="modal-content">
+
+            <div class="cart-items">
+                
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/IMG_7775.jpeg" alt="product">
+                    </div>
+                    <div class="details">
+                        <span class="product-name">Modular Modern</span>
+                        <span class="product-price">$ 540.00</span>
+                    </div>
+                    <button class="close-item">×</button>
+                </div>
+
+             
+                
+                <div class="item">
+                    <div class="img-container">
+                        <img src="img/IMG_7778.jpeg" alt="product">
+                    </div>
+                    <div class="details">
+                        <span class="product-name">Modular Modern</span>
+                        <span class="product-price">$ 540.00</span>
+                    </div>
+                    <button class="close-item">×</button>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <div class="total-line">
+                    <span class="label">Total:</span>
+                    <span class="amount">$ 540.00</span>
+                </div>
+                <button class="btn-checkout">CHECK OUT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+</body>
+</html>
