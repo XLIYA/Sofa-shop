@@ -1,11 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sofa-shop</title>
-</head>
-<body>
-    
-</body>
+    <script src="tailwind.js"></script>
+  </head>
+  <body>
+    <!-- hero-and-header-section -->
+    <section>
+      <header
+        class="flex flex-row justify-between mx-5 my-6 lg:py-2 border-y-2 border-dashed border-gray-400"
+      >
+        <div class="flex gap-1.5 lg:gap-5 text-[7px] lg:text-sm">
+          <button class="hover:text-red-600">HOME</button>
+          <button class="hover:text-red-600">FURNITURE</button>
+          <button class="hover:text-red-600">ALL PRODUCTS</button>
+          <button class="hover:text-red-600">SHOP</button>
+          <button class="hover:text-red-600">MOBILE</button>
+          <button class="hover:text-red-600">OFFER</button>
+          <button class="hover:text-red-600">DEAL</button>
+          <button class="hover:text-red-600">BLOG</button>
+          <button class="hover:text-red-600">CONTACT US</button>
+          <button class="hover:text-red-600">COSTUM MENU</button>
+        </div>
+        <div class="flex flex-row items-center gap-1 lg:gap-3">
+          <button></button>
+            <svg
+              class="lg:w-5 lg:h-5 w-3 h-3 hover:text-red-600"
+              id="Search"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.00244 10.5815C4.00244 6.70052 7.16044 3.54352 11.0414 3.54352C14.9214 3.54352 18.0794 6.70052 18.0794 10.5815C18.0794 14.4625 14.9214 17.6205 11.0414 17.6205C7.16044 17.6205 4.00244 14.4625 4.00244 10.5815ZM22.4974 21.0405L17.8984 16.4535C19.2544 14.8725 20.0794 12.8235 20.0794 10.5815C20.0794 5.59852 16.0244 1.54352 11.0414 1.54352C6.05744 1.54352 2.00244 5.59852 2.00244 10.5815C2.00244 15.5655 6.05744 19.6205 11.0414 19.6205C13.0634 19.6205 14.9264 18.9445 16.4334 17.8175L21.0854 22.4565L22.4974 21.0405Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+          <span class="w-px h-5 bg-gray-400"></span>
+          <button class="group">
+            <svg
+              class="lg:w-5 lg:h-5 w-3 h-3 text-black hover:text-red-600 transition-colors"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="20" r="1" />
+              <circle cx="18" cy="20" r="1" />
+              <path
+                d="M3 4h2l2.4 10.2a1 1 0 0 0 1 .8h9.7a1 1 0 0 0 1-.8L21 7H7"
+              />
+            </svg>
+          </button>
+          <div class="text-[7px] lg:text-xs">
+            <span class="text-red-600">3</span>
+            <span>(items)</span>
+          </div>
+        </div>
+      </header>
+      <main
+        class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-2 gap-4 lg:gap-7 m-5"
+      >
+        <div
+          class="relative lg:col-span-2 lg:row-span-2 flex items-center justify-center"
+        >
+          <img
+            class="h-[530px] w-full object-cover rounded-lg"
+            src="https://shop.mrkate.com/cdn/shop/files/MrKate_2566479MK_03_colorbg.jpg?v=1721796873"
+          />
+          <div class="absolute flex flex-col gap-2 items-center mb-80">
+            <h1 class="text-red-600 text-2xl lg:text-3xl">FURNITURE</h1>
+            <h2 class="text-black font-bold text-3xl lg:text-5xl">
+              WOOD STYLE
+            </h2>
+          </div>
+
+          <div
+            class="absolute w-24 h-24 bg-yellow-500 rounded-full text-white font-bold text-2xl flex justify-center items-center ml-80 mb-32 lg:ml-96 lg:mb-40"
+          >
+            -30%
+          </div>
+
+          <button
+            class="absolute bottom-24 bg-zinc-300 w-32 h-8 text-xs font-bold shadow-md hover:bg-red-600"
+          >
+            SHOP NOW
+          </button>
+
+          <div
+            class="absolute bottom-3 inset-x-0 flex flex-row justify-center gap-3"
+          >
+            <div class="cursor-pointer hover:text-red-600 text-xl leading-none">
+              ■
+            </div>
+            <div class="cursor-pointer hover:text-red-600 text-xl leading-none">
+              ■
+            </div>
+            <div class="cursor-pointer hover:text-red-600 text-xl leading-none">
+              ■
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2 rounded-lg flex items-center justify-center">
+          <img
+            class="h-[250px] w-[650px] rounded-lg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGLcScLxuGWN7ImhDlYxo9UwmGjWyyByUGg&s"
+          />
+        </div>
+        <div class="rounded-lg flex items-center justify-center">
+          <img
+            class="lg:h-[250px] lg:w-[300px] w-[650px] rounded-lg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFey85xnCpbASzOR6dkoexdcOxjpGPBeGktQ&s"
+          />
+        </div>
+        <div class="relative rounded-lg flex items-center justify-center">
+          <img
+            class="lg:h-[250px] lg:w-[300px] w-[650px] rounded-lg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQu-MydY4r-Cz4XhBDl3TsdQeWurSyezRfcQ&s"
+          />
+          <div
+            class="absolute w-24 h-24 lg:w-16 lg:h-16 bg-white rounded-full text-gray-500 font-bold text-2xl lg:text-lg flex justify-center items-center ml-48 mb-28"
+          >
+            -15%
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
 </html>
