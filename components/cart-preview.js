@@ -74,7 +74,7 @@ function renderCart(root, items) {
       <span>Total:</span>
       <strong class="text-black">${formatPrice(total)}</strong>
     </div>
-    <a class="mt-6 flex h-12 items-center justify-center border border-gray-100 text-[18px] font-bold uppercase hover:bg-black hover:text-white" href="all-product.html">
+    <a class="mt-6 flex h-12 items-center justify-center border border-gray-100 text-[18px] font-bold uppercase hover:bg-black hover:text-white" href="shopping-cart.html">
       Check Out
     </a>
   `;

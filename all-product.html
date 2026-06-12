@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart | Sofa Shop</title>
+  <title>All Products | Sofa Shop</title>
   <script src="tailwind.js"></script>
 </head>
 
@@ -25,25 +25,29 @@
         <a class="hover:text-[#ef4444]" href="#">Contact Us</a>
         <a class="hover:text-[#ef4444]" href="#">Custom Menu</a>
       </nav>
+
       <div class="flex shrink-0 items-center gap-[18px]">
-        <button class="flex items-center text-[#2f2f2f] hover:text-[#ef4444]" type="button" aria-label="Search"><svg
-            class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <button class="flex items-center text-[#2f2f2f] hover:text-[#ef4444]" type="button" aria-label="Search">
+          <svg class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="m21 21-4.35-4.35m1.35-5.4a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0Z" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" />
-          </svg></button>
+          </svg>
+        </button>
         <span class="h-[35px] w-px bg-gray-200"></span>
         <div class="group relative flex self-stretch items-center">
-          <a class="flex items-center gap-2 hover:text-[#ef4444]" href="all-product.html"
-            aria-label="Shopping cart"><svg class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none"
-              aria-hidden="true">
+          <a class="flex items-center gap-2 text-[#2f2f2f] no-underline hover:text-[#ef4444]" href="shopping-cart.html"
+            aria-label="Shopping cart">
+            <svg class="h-[23px] w-[23px]" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="9" cy="20" r="1.5" stroke="currentColor" stroke-width="1.8" />
               <circle cx="18" cy="20" r="1.5" stroke="currentColor" stroke-width="1.8" />
               <path d="M3 4h2l2.5 11h10.7L21 7H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round" />
-            </svg><span><span class="text-[#ef4444]">3</span> ( items )</span></a>
-          <div
-            data-cart-preview
-            class="invisible absolute right-0 top-full z-50 w-[380px] max-w-[calc(100vw-16px)] translate-y-2 border border-gray-100 bg-white p-4 opacity-0 shadow-sm transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+            </svg>
+            <span><span class="text-[#ef4444]">3</span> ( items )</span>
+          </a>
+          <div data-cart-preview
+            class="invisible absolute right-0 top-full z-50 w-[380px] max-w-[calc(100vw-16px)] translate-y-2 border border-gray-100 bg-white p-4 opacity-0 shadow-sm transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+            aria-label="Shopping cart preview">
             <div class="py-8 text-center text-gray-500">Loading cart...</div>
           </div>
         </div>
@@ -51,126 +55,31 @@
     </div>
   </header>
 
-  <main class="mx-auto w-full max-w-[1510px] px-1 pb-2 pt-5">
+  <main class="mx-auto w-full max-w-[1510px] px-1 pb-12 pt-5">
     <div class="mb-7 flex items-center gap-2 text-[13px] text-gray-500">
-      <a href="index.html" aria-label="Home"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <a href="index.html" aria-label="Home">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="2"
             stroke-linejoin="round" />
-        </svg></a>
+        </svg>
+      </a>
       <span>/</span>
-      <span>Shopping cart</span>
+      <span>All Products</span>
     </div>
 
-    <div class="mb-3 flex items-center justify-between gap-5">
-      <h1 class="text-[20px] font-bold uppercase leading-none text-[#1f2933]">Shopping Cart</h1>
-      <a class="flex h-12 items-center justify-center border border-gray-200 px-6 text-[13px] font-bold uppercase hover:bg-black hover:text-white"
-        href="#">Proceed To Checkout</a>
-    </div>
-
-    <section class="border border-gray-200" aria-label="Shopping cart">
-      <table class="w-full table-fixed border-collapse">
-        <thead>
-          <tr class="h-[39px] text-center text-[13px] font-bold uppercase">
-            <th class="border-b border-r border-gray-200" colspan="3">Product Name</th>
-            <th class="border-b border-r border-gray-200">Unit Price</th>
-            <th class="border-b border-r border-gray-200">Qty</th>
-            <th class="border-b border-r border-gray-200">Sub Total</th>
-            <th class="border-b border-gray-200" aria-label="Remove"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="h-[123px]">
-            <td class="w-[122px] border-b border-r border-gray-200 p-[10px]"><span
-                class="flex h-[102px] w-[102px] items-center justify-center bg-[#f4f4f4] text-gray-300"><svg
-                  class="h-9 w-9" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 7 12 14v20l12 7 12-7V14L24 7Z" stroke="currentColor" stroke-width="3" />
-                  <path d="M18 17v14l6 4 6-4V17l-6 4-6-4Z" stroke="currentColor" stroke-width="3" />
-                </svg></span></td>
-            <td class="border-b border-r border-gray-200 px-5 text-[12px] text-gray-700">Modular Modern</td>
-            <td class="w-[42px] border-b border-r border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 20h4L19 9l-4-4L4 16v4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                  <path d="m13 7 4 4" stroke="currentColor" stroke-width="2" />
-                </svg></button></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-[122px] border-b border-r border-gray-200 text-center"><input
-                class="h-7 w-[102px] border border-gray-200 text-center text-[12px]" type="text" value="1"
-                aria-label="Quantity"></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-12 border-b border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="m7 7 10 10m0-10L7 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-                </svg></button></td>
-          </tr>
-          <tr class="h-[123px]">
-            <td class="w-[122px] border-b border-r border-gray-200 p-[10px]"><span
-                class="flex h-[102px] w-[102px] items-center justify-center bg-[#f4f4f4] text-gray-300"><svg
-                  class="h-9 w-9" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 7 12 14v20l12 7 12-7V14L24 7Z" stroke="currentColor" stroke-width="3" />
-                  <path d="M18 17v14l6 4 6-4V17l-6 4-6-4Z" stroke="currentColor" stroke-width="3" />
-                </svg></span></td>
-            <td class="border-b border-r border-gray-200 px-5 text-[12px] text-gray-700">Modular Modern</td>
-            <td class="w-[42px] border-b border-r border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 20h4L19 9l-4-4L4 16v4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                  <path d="m13 7 4 4" stroke="currentColor" stroke-width="2" />
-                </svg></button></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-[122px] border-b border-r border-gray-200 text-center"><input
-                class="h-7 w-[102px] border border-gray-200 text-center text-[12px]" type="text" value="1"
-                aria-label="Quantity"></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-12 border-b border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="m7 7 10 10m0-10L7 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-                </svg></button></td>
-          </tr>
-          <tr class="h-[123px]">
-            <td class="w-[122px] border-b border-r border-gray-200 p-[10px]"><span
-                class="flex h-[102px] w-[102px] items-center justify-center bg-[#f4f4f4] text-gray-300"><svg
-                  class="h-9 w-9" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 7 12 14v20l12 7 12-7V14L24 7Z" stroke="currentColor" stroke-width="3" />
-                  <path d="M18 17v14l6 4 6-4V17l-6 4-6-4Z" stroke="currentColor" stroke-width="3" />
-                </svg></span></td>
-            <td class="border-b border-r border-gray-200 px-5 text-[12px] text-gray-700">Modular Modern</td>
-            <td class="w-[42px] border-b border-r border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 20h4L19 9l-4-4L4 16v4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                  <path d="m13 7 4 4" stroke="currentColor" stroke-width="2" />
-                </svg></button></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-[122px] border-b border-r border-gray-200 text-center"><input
-                class="h-7 w-[102px] border border-gray-200 text-center text-[12px]" type="text" value="1"
-                aria-label="Quantity"></td>
-            <td class="w-[168px] border-b border-r border-gray-200 text-center text-[12px] text-black">$659.00</td>
-            <td class="w-12 border-b border-gray-200 text-center"><button
-                class="inline-flex h-6 w-6 items-center justify-center text-slate-600" type="button"><svg
-                  class="h-4 w-4" viewBox="0 0 24 24" fill="none">
-                  <path d="m7 7 10 10m0-10L7 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-                </svg></button></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="flex items-center justify-between gap-5 px-5 py-5">
-        <a class="flex h-10 items-center justify-center border border-gray-200 px-5 text-[13px] font-bold uppercase hover:bg-black hover:text-white"
-          href="index.html">Continue Shopping</a>
-        <div class="flex gap-5">
-          <button
-            class="flex h-10 items-center justify-center border border-gray-200 px-5 text-[13px] font-bold uppercase hover:bg-black hover:text-white"
-            type="button">Update Shopping Cart</button>
-          <button
-            class="flex h-10 items-center justify-center border border-gray-200 px-5 text-[13px] font-bold uppercase hover:bg-black hover:text-white"
-            type="button">Clear Shopping Cart</button>
-        </div>
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-5 border-b border-gray-200 pb-5">
+      <div>
+        <h1 class="text-[24px] font-bold uppercase leading-none text-[#1f2933]">All Products</h1>
+        <p id="all-products-count" class="mt-3 text-[13px] text-gray-500">Loading products...</p>
       </div>
-    </section>
+      <a class="flex h-11 items-center justify-center border border-gray-200 px-6 text-[13px] font-bold uppercase hover:bg-black hover:text-white"
+        href="shopping-cart.html">View Cart</a>
+    </div>
+
+    <section id="all-products-root" aria-live="polite"></section>
   </main>
-  <script src="pages/cart-page.js" type="module"></script>
+
+  <script src="pages/all-product-page.js" type="module"></script>
 </body>
 
 </html>
